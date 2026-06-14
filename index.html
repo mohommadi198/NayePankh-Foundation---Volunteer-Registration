@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NayePankh Foundation - Volunteer Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">✨</span>
+                NayePankh
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#registration" class="nav-link">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#volunteers" class="nav-link">Volunteers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#stats" class="nav-link">Impact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to NayePankh</h1>
+            <p class="hero-subtitle">Empowering Youth. Building Futures. Changing Communities.</p>
+            <p class="hero-description">
+                Join us in our mission to provide quality education and mentorship to underprivileged youth. 
+                Every volunteer makes a real difference in someone's life.
+            </p>
+            <button class="cta-button" id="ctaButton">Become a Volunteer</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About NayePankh Foundation</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">📚</div>
+                    <h3>Education First</h3>
+                    <p>
+                        We believe every child deserves access to quality education regardless of their economic background. 
+                        Our programs focus on foundational literacy, numeracy, and life skills training.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🤝</div>
+                    <h3>Community Driven</h3>
+                    <p>
+                        Our volunteers are the backbone of NayePankh. Together, we create supportive learning environments 
+                        and mentorship programs that transform lives and inspire hope.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>Sustainable Impact</h3>
+                    <p>
+                        We focus on creating long-term sustainable solutions. Our programs are designed to empower students 
+                        to become agents of change in their own communities.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="why-volunteer">
+                <h3>Why Volunteer With Us?</h3>
+                <ul class="benefit-list">
+                    <li>Make a direct impact on a child's future</li>
+                    <li>Develop leadership and mentoring skills</li>
+                    <li>Build a network of like-minded changemakers</li>
+                    <li>Gain valuable work experience</li>
+                    <li>Be part of a supportive volunteer community</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="registration">
+        <div class="container">
+            <h2 class="section-title">Join Our Volunteer Network</h2>
+            <div class="form-container">
+                <form id="volunteerForm" class="volunteer-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="your@email.com"
+                                required
+                            >
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="+91 98765 43210"
+                                required
+                            >
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input 
+                                type="number" 
+                                id="age" 
+                                name="age" 
+                                placeholder="18"
+                                min="16"
+                                max="80"
+                                required
+                            >
+                            <span class="error-message" id="ageError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input 
+                                type="text" 
+                                id="city" 
+                                name="city" 
+                                placeholder="Mumbai, Delhi, Bangalore..."
+                                required
+                            >
+                            <span class="error-message" id="cityError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skills">Your Skills *</label>
+                        <div class="skills-container" id="skillsContainer">
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Teaching">
+                                <span>Teaching</span>
+                            </label>
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Sports">
+                                <span>Sports</span>
+                            </label>
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Music">
+                                <span>Music</span>
+                            </label>
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Art & Craft">
+                                <span>Art & Craft</span>
+                            </label>
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Technology">
+                                <span>Technology</span>
+                            </label>
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Counseling">
+                                <span>Counseling</span>
+                            </label>
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Public Speaking">
+                                <span>Public Speaking</span>
+                            </label>
+                            <label class="skill-checkbox">
+                                <input type="checkbox" name="skills" value="Other">
+                                <span>Other</span>
+                            </label>
+                        </div>
+                        <span class="error-message" id="skillsError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">Area of Interest *</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">-- Select an area --</option>
+                            <option value="Academic Tutoring">Academic Tutoring</option>
+                            <option value="Career Guidance">Career Guidance</option>
+                            <option value="Extracurricular Activities">Extracurricular Activities</option>
+                            <option value="Mental Health Support">Mental Health Support</option>
+                            <option value="Digital Literacy">Digital Literacy</option>
+                            <option value="Professional Development">Professional Development</option>
+                        </select>
+                        <span class="error-message" id="interestError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="availability">Availability *</label>
+                        <div class="availability-options">
+                            <label class="radio-option">
+                                <input type="radio" name="availability" value="Weekdays">
+                                <span>Weekdays</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="availability" value="Weekends">
+                                <span>Weekends</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="availability" value="Flexible">
+                                <span>Flexible</span>
+                            </label>
+                        </div>
+                        <span class="error-message" id="availabilityError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Why do you want to volunteer? *</label>
+                        <textarea 
+                            id="motivation" 
+                            name="motivation" 
+                            placeholder="Tell us what drives you to make a difference..."
+                            rows="4"
+                            required
+                        ></textarea>
+                        <span class="error-message" id="motivationError"></span>
+                    </div>
+
+                    <div class="form-consent">
+                        <label class="consent-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span>I agree to NayePankh's volunteer code of conduct and privacy policy</span>
+                        </label>
+                        <span class="error-message" id="consentError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-button">Register as Volunteer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-icon">✓</div>
+            <h2>Welcome to NayePankh!</h2>
+            <p>Thank you for registering as a volunteer. We're excited to have you on board!</p>
+            <p class="modal-message" id="modalMessage"></p>
+            <div class="modal-details" id="modalDetails"></div>
+            <button class="modal-button" id="closeModal">Explore Volunteers</button>
+        </div>
+    </div>
+
+    <!-- Volunteers Dashboard Section -->
+    <section id="volunteers" class="volunteers-section">
+        <div class="container">
+            <h2 class="section-title">Our Volunteer Community</h2>
+            
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search volunteers by name..."
+                        class="search-input"
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+                
+                <div class="filter-box">
+                    <select id="skillFilter" class="filter-select">
+                        <option value="">All Skills</option>
+                        <option value="Teaching">Teaching</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Music">Music</option>
+                        <option value="Art & Craft">Art & Craft</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Counseling">Counseling</option>
+                        <option value="Public Speaking">Public Speaking</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="volunteers-stats">
+                <div class="stat-badge">
+                    <span class="stat-number" id="volunteerCount">0</span>
+                    <span class="stat-label">Total Volunteers</span>
+                </div>
+            </div>
+
+            <div class="volunteers-grid" id="volunteersGrid">
+                <div class="empty-state">
+                    <p>No volunteers registered yet. Be the first one!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="statistics">
+        <div class="container">
+            <h2 class="section-title">Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-title">
+                        <span class="counter" data-target="1250">0</span>+
+                    </h3>
+                    <p class="stat-description">Volunteers Empowered</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-title">
+                        <span class="counter" data-target="45">0</span>+
+                    </h3>
+                    <p class="stat-description">Active Programs</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-title">
+                        <span class="counter" data-target="89">0</span>+
+                    </h3>
+                    <p class="stat-description">Events Conducted</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-title">
+                        <span class="counter" data-target="5200">0</span>+
+                    </h3>
+                    <p class="stat-description">Students Impacted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Visit Us</h3>
+                    <p>
+                        NayePankh Foundation Headquarters<br>
+                        123 Education Street<br>
+                        Mumbai, Maharashtra 400001
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p>
+                        <a href="mailto:volunteers@nayepankh.org">volunteers@nayepankh.org</a><br>
+                        <a href="mailto:info@nayepankh.org">info@nayepankh.org</a>
+                    </p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>
+                        +91 9876 543 210<br>
+                        +91 8765 432 109<br>
+                        Monday - Friday, 10 AM - 6 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NayePankh Foundation</h4>
+                    <p>Transforming lives through education, mentorship, and community support.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#registration">Register</a></li>
+                        <li><a href="#volunteers">Volunteers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NayePankh Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
